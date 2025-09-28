@@ -1,0 +1,59 @@
+services:
+  re2:
+    image: frrouting/frr:latest
+    container_name: re2
+    networks:
+      - lab-net
+    privileged: true
+    tty: true
+    command: ["sleep", "infinity"]
+    volumes:
+      - ./re2:/etc/frr
+
+  re3:
+    image: frrouting/frr:latest
+    container_name: re3
+    networks:
+      - lab-net
+    privileged: true
+    tty: true
+    command: ["sleep", "infinity"]
+    volumes:
+      - ./re3:/etc/frr
+
+  re4:
+    image: frrouting/frr:latest
+    container_name: re4
+    networks:
+      - lab-net
+    privileged: true
+    tty: true
+    command: ["sleep", "infinity"]
+    volumes:
+      - ./re4:/etc/frr
+
+  re5:
+    image: frrouting/frr:latest
+    container_name: re5
+    networks:
+      - lab-net
+    privileged: true
+    tty: true
+    command: ["sleep", "infinity"]
+    volumes:
+      - ./re5:/etc/frr
+
+  re6:
+    image: frrouting/frr:latest
+    container_name: re6
+    networks:
+      - lab-net
+    privileged: true
+    tty: true
+    command: ["sleep", "infinity"]
+    volumes:
+      - ./re6:/etc/frr
+
+networks:
+  lab-net:
+    driver: bridge
